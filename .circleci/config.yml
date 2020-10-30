@@ -44,4 +44,7 @@ workflows:
   workflow:
     jobs:
       - deploy
-      - sast
+      # Start Crashtest Security Suite
+      - dast:
+          requires:
+            - deploy
